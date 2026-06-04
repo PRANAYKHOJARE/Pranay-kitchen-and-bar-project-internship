@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* DARK MODE */
+@custom-variant dark (.dark &);
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --primary: #111111;
+  --border: #e5e5e5;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --primary: #ffffff;
+  --border: #27272a;
+}
+
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+  }
+
+  * {
+    border-color: var(--border);
+  }
+}
